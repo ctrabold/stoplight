@@ -17,8 +17,7 @@ group :development do
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'shotgun',                  '~> 0.9'
-  gem 'libv8',                    '3.16.14.7'
-  gem 'therubyracer'
+  gem 'libv8'
 end
 
 group :test do

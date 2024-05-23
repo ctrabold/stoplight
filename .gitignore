@@ -5,3 +5,4 @@ config/servers.yml
 tmp
 vendor/ruby
 vendor/cache
+vendor/bundle
