@@ -1,4 +1,5 @@
-FROM ruby:2.1-slim
+#FROM ruby:2.1-slim
+FROM ruby:2.7-slim
 
 ENV STOPLIGHT_SERVER_URL ''
 ENV STOPLIGHT_USERNAME ''
@@ -11,7 +12,8 @@ RUN mkdir -p /opt/app
 
 COPY Gemfile /opt/app/
 COPY Gemfile.lock /opt/app/
-RUN bundle install --without development test
+RUN bundle config set without 'development test'
+RUN bundle install
 COPY . /opt/app
 
 # Fix permissions for OpenShift (remove if you don't run the container there)
