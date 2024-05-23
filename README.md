@@ -83,13 +83,14 @@ Stoplight is a Rack application, so you'll need to install Ruby and Rubygems bef
 Start by cloning the application repository:
 
 ```shell
-git clone git@github.com:customink/stoplight.git
+git clone git@github.com:ctrabold/stoplight.git
 ```
 
 And then bundle all the application's dependencies:
 
 ```shell
 bundle install
+bundle exec rackup --host 0.0.0.0 -p 5000
 ```
 
 3 Open this address in your browser: `http://localhost:5000/`. Type `t` to toggle the project list.
